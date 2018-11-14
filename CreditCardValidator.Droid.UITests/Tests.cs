@@ -16,7 +16,11 @@ namespace CreditCardValidator.Droid.UITests
 		[SetUp]
 		public void BeforeEachTest()
 		{
-			app = ConfigureApp.Android.StartApp();
+			app = ConfigureApp
+			    .Android
+			    .EnableLocalScreenshots()
+			    .ApkFile(@"C: \Users\psc\AppData\Local\Xamarin\Mono for Android\Archives\2018 - 11 - 14\CreditCardValidator.Droid 11 - 14 - 18 11.39 AM.apkarchive\com.xamarin.example.creditcardvalidator.apk")
+                .StartApp();
 		}
 
 		[Test]
